@@ -3,17 +3,17 @@ import react from "react";
 class Validator extends react.Component {
   state = { password: "" };
 
+  onFormSubmit(even) {
+    even.preventDefault();
+  }
+
   render() {
     return (
-      <form className="ui form">
+      <form onSubmit={this.onFormSubmit} className="ui form">
         <div className="field">
-          {" "}
           <br />
           <div>
-            <label>
-              {" "}
-              <h5>Password</h5>
-            </label>
+            <h5>Password</h5>
           </div>
           <input
             type="password"
